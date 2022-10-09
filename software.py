@@ -49,7 +49,7 @@ class Object:
             self.v_x=software.mouse.get_pos()[0]-self.ticks[-1][0]
             self.v_y=software.mouse.get_pos()[1]-self.ticks[-1][1]
         self.x_x=self.v_x*settings()['air_resistance']
-        self.v_y=self.v_y+settings()['gravity']*settings()['air_resistance']
+        self.x_y=self.v_y+settings()['gravity']*settings()['air_resistance']
         self.position=self.position[0]+self.v_x, self.position[1]+self.v_y
         if self.position[1]+self.size>=settings()['screen_size'][1] or self.position[1]-self.size<=0:
             self.position=self.position[0], self.position[1]-settings()['gravity']-settings()['air_resistance']
