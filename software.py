@@ -4,7 +4,7 @@ def settings():
     settings={
         'screen_size': (1080, 690),
         'gravity': 1,
-        'air_resistance':0.7,
+        'air_resistance':1,
         'fps':60,
     }; return settings
 class Software:
