@@ -42,6 +42,7 @@ class Object:
         self.v_x=x
         self.v_y=y
         self.world_positions_objects=world_list_position_objects
+        self.ticks=[]
     def collision(self):
         key=software.key.get_pressed()
         if key[software.K_SPACE]:
@@ -58,5 +59,6 @@ class Object:
             self.v_x=-self.v_x*self.stiffness_coefficient
         self.position=self.position[0], self.position[1]
         #print(f'position: x={self.position[0]}; | y={self.position[1]}')
+        self.ticks.append(software.mouse.get_pos())
         return (self.position)
 Software().run()
