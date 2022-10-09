@@ -46,8 +46,8 @@ class Object:
         key=software.key.get_pressed()
         if key[software.K_SPACE]:
             self.position=software.mouse.get_pos()[0], software.mouse.get_pos()[1]
-            self.v_x=0
-            self.v_y=0
+            self.v_x=software.mouse.get_pos()[0]-self.ticks[-1][0]
+            self.v_y=software.mouse.get_pos()[1]-self.ticks[-1][1]
         self.x_x=self.v_x*settings()['air_resistance']
         self.v_y=self.v_y+settings()['gravity']*settings()['air_resistance']
         self.position=self.position[0]+self.v_x, self.position[1]+self.v_y
