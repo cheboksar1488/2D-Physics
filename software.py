@@ -6,7 +6,6 @@ def settings():
         'gravity': 1,
         'air_resistance':0.7,
         'fps':60,
-        'DPI':110,
     }; return settings
 class Software:
     def __init__(self):
